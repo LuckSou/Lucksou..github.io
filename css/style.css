@@ -1,0 +1,628 @@
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+   padding: 0;
+   position: relative;
+   margin: 0;
+}
+
+body {
+	font-family: 'Cuprum', sans-serif;
+	overflow-x: hidden;
+}
+
+a { text-decoration: none; }
+li { list-style-type: none; }
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #424242;
+}
+::-webkit-scrollbar {
+	width: 20px;
+}
+
+::-webkit-scrollbar-thumb  {
+	background-color: wheat;
+	border-radius: 10px;
+}
+
+/*------------------------------------*\
+  #HOME-SECTION
+\*------------------------------------*/
+
+#home {
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/praia-tamandare.jpeg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	position: relative;
+	height: 110vh;
+}
+
+#home .welcome {
+	position: absolute;
+    margin-top: 50vh;
+    margin-left: 30%;
+    color: wheat;
+}
+
+#home .welcome #text { 
+	font-size: 42pt;
+	padding-right: 4px;
+	border-right: .12em solid wheat;
+	
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: wheat; }
+}
+
+.fixed {
+	position: fixed !important;
+	width: 100% !important;
+	top: 0;
+	z-index: 99999;
+	box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+}
+
+
+.fixed .container nav { 
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#header {
+	background-color: #424242;
+	position: absolute;
+   	height: 50px;
+    bottom: 0;
+    width: 100%;
+    display: block;
+}
+
+#header  .container nav {
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    height: 50px;
+
+}
+
+#header  .container nav ul {
+	display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#header  .container nav ul li {
+	display: block;
+    font-size: 18pt;
+    margin-right: 2%;
+}
+
+#header  .container nav ul li:hover a{
+	background-border: 1px solid wheat;
+	border-radius: 5px;
+	background: wheat;
+	color: #424242;
+}
+
+#header  .container nav ul li a {
+	color:wheat;
+	padding-left: 5px;
+	padding-right: 5px;
+	
+}
+
+#home #redes-trabalho {
+	position: absolute;
+    margin-top: 4%;
+    display: flex;
+    width: 30%;
+}
+
+
+#home #redes-trabalho ul { display: flex; }
+#home #redes-trabalho ul li { margin-right: 1em; }
+#home #redes-trabalho ul li:hover { margin-top: -1em; }
+#home #redes-trabalho ul li i {
+	font-size: 200%;
+	color: wheat;
+	
+}
+
+#home #eu {
+	position: absolute;
+	text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80vh;
+    color: wheat;
+}
+
+#home #eu .circle {
+	border-radius: 80%;
+	width: 9em;
+	height: 9em;
+	margin-bottom: 0.8%;
+	background-size: cover;
+	background-position: center;
+	background-image: url('../images/eu.jpg');
+} 
+
+
+
+
+/*------------------------------------*\
+  #SOBRE-SECTION
+\*------------------------------------*/
+
+#sobre {
+	padding-top: 96px;
+	padding-bottom: 96px;
+}
+
+#sobre .container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#sobre .container p { 
+	font-size: 20pt;
+	color: #424242;
+	text-align: justify;
+}
+
+
+#sobre .curriculo {
+	padding: 20px;
+	text-align: center;
+	color: #424242;
+	border: 2px solid #424242;
+	background-color: transparent;
+	width: 200px;
+	font-size: 1em;
+	margin-top: 30px;
+	transition: background-color 1000ms cubic-bezier(0.2, 0.41, 0.57, 1);
+}
+
+#sobre .curriculo:hover {
+	background-color: #424242;
+	color: wheat;
+}
+
+
+
+/*------------------------------------*\
+  #TRABALHOS-SECTION
+\*------------------------------------*/
+
+#trabalhos {
+	padding-bottom: 300px;
+	padding-top: 96px;
+
+}
+
+#trabalhos .box-mobile { display: none; }
+
+#trabalhos h1 {
+	text-align: center;
+	color: #424242;
+	font-size: 25pt;
+	margin-bottom: 1em;
+}
+
+#trabalhos .slick-list { 
+	padding: 50px !important;
+	width: 90%; 
+	margin: 0 auto;
+}
+
+#trabalhos .slick-slide {
+	width: 300px !important;
+	height: 250px !important;
+	transition: .3s ease-out;
+	opacity: 0.8;
+	position: relative;
+	background-color: white;
+	-webkit-box-shadow: 0px 1px 11px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 1px 11px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 1px 11px 0px rgba(0,0,0,0.75);
+	outline: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+#trabalhos .logo-projeto {
+	width: 80%;
+	height: 80%;
+	position: absolute;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	backface-visibility: hidden;
+	z-index: -1;
+}
+
+#trabalhos .slick-slide img, .trabalho img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	object-position: center;
+}
+
+#trabalhos .slick-center {
+	transform: scale(1.2);
+	opacity: 1;
+	z-index: 3;
+}
+
+.back-descricao {
+	position: absolute;
+  top: 0; right: 0; bottom: 20px; left: 0;
+	z-index: 2;
+	overflow: hidden;
+  
+  /* fix text transition issue for .left and .right but need to overwrite left and right properties in .right */
+  width: 100%; 
+  top: 100%;
+  -moz-transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+  -webkit-transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+  transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+}
+
+#trabalhos .slick-center:before, .trabalho-mobile:before {
+	background: rgba(0,0,0,0.7);
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	opacity: 0;
+	transition: 0.3s all ease-out;
+}
+
+#trabalhos .slick-center:hover:before, .trabalho-mobile:hover:before { 
+	opacity: 1;
+  top: 0px;
+}
+
+#trabalhos .slick-center:hover .back-descricao, .trabalho-mobile:hover .back-descricao { 
+	top: 0;
+	padding: 10px;
+}
+
+#trabalhos .trabalhos-secao .trabalho  .back-descricao, .trabalho-mobile .back-descricao {
+	text-align: center;
+  color: wheat;
+}
+
+#trabalhos .trabalhos-secao .trabalho .back-descricao .title, .trabalho-mobile .back-descricao .title {
+	text-align: center;
+	font-size: 15pt;
+	margin-bottom: 30px;
+	font-weight: bold;
+}
+
+#trabalhos .trabalhos-secao .trabalho .back-descricao .first-text, .trabalho-mobile .back-descricao .first-text {
+	margin-bottom: 10px;
+	
+}
+#trabalhos .trabalhos-secao .trabalho .back-descricao  a, .trabalho-mobile .back-descricao a {
+	color: wheat;
+	
+	font-weight: bold;
+}
+#trabalhos .trabalhos-secao .trabalho .back-descricao .second-text, .trabalho-mobile .back-descricao .second-text {
+	margin-bottom: 10px;
+}
+
+.arrows {
+  color: white;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: -169px;
+}
+
+.arrows .arrow {
+  cursor: pointer;
+}
+
+.arrow a{ font-size: 30pt; }
+
+.prev img {
+  width: 35px;
+  height: 35px;
+}
+
+.next img {
+  width: 35px;
+  height: 35px;
+}
+
+.projetos-behance {
+	width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#link-behance {
+	background: #424242;
+	color: wheat;
+	padding: 14px;
+	width: 213px;
+	text-align: center;
+	margin-top: 43px;
+}
+
+
+
+
+/*------------------------------------*\
+  #RECOMENDACAO-SECTION
+\*------------------------------------*/
+
+#recomendacoes {
+	padding-top: 96px;
+	padding-bottom: 60px;
+	position: relative;
+}
+
+#recomendacoes h1 {
+	text-align: center;
+	color: #424242;
+	font-size: 25pt;
+	margin-bottom: 1em;
+}
+
+.slick-slider {
+	width: 80%;
+	margin: 0 auto;
+	color: #424242;
+}
+
+#recomendacoes .nome, #recomendacoes  .funcao { font-weight: bold; }
+
+#recomendacoes .slick-prev, #recomendacoes .slick-next {
+    font-size: 10pt;
+}
+#recomendacoes .slick-prev i, #recomendacoes .slick-next i {
+	color: #424242;
+	font-size: 200%;
+}
+#recomendacoes .slick-prev {
+	left: 20px;
+}
+#recomendacoes .slick-next {
+	right: 20px;
+}
+
+#recomendacoes .recomendacao .mensagem {
+	margin-bottom: 2em;
+	text-align: justify;
+}
+
+/*------------------------------------*\
+  #TECNOLOGIAS-SECTION
+\*------------------------------------*/
+
+.tecnologias {
+	padding-bottom: 60px; 
+}
+.tecnologias .container {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.box { width: 70%; }
+
+.box-tecnologias { 
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 10px;
+	-webkit-box-shadow: 1px 1px 15px -4px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px 1px 15px -4px rgba(0,0,0,0.75);
+box-shadow: 1px 1px 15px -4px rgba(0,0,0,0.75);
+}
+
+.titulo-box {
+	padding: 22px;
+	background-color: #424242;
+	text-align: center;
+}
+
+.titulo-box #titulo-p { 
+	color: wheat !important;
+	font-size: 20pt;
+}
+
+.logo-tecnologia { 
+	width: 60px;
+	height: 60px;
+	margin-bottom: 10px;
+	transition: 0.3s all ease-out;
+}
+
+.logo-tecnologia:last-child { margin-right: 0; }
+
+.logo-tecnologia:hover {
+	transform: scale(1.1);
+}
+
+.logo-tecnologia .imagem { 
+	width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.aprendendo {
+	margin-top: 25px;
+}
+
+.box-tecnologias.tecnologias-aprendendo { justify-content: center; }
+
+.box-tecnologias.tecnologias-aprendendo .logo-tecnologia { margin-right: 10px; }
+/*------------------------------------*\
+  #FOOTER-SECTION
+\*------------------------------------*/
+
+footer {
+	background-color:#424242;
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+footer .container {
+	display: flex;
+	color: wheat;
+	font-size: 15pt;
+	justify-content: space-around;
+}
+
+
+
+
+/*------------------------------------*\
+  #TRADUZIR-BUTTON
+\*------------------------------------*/
+.traduzir {
+	position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 2%;
+    width: 8em;
+    height: 2em;
+    color: #424242;
+    border: 2px solid wheat;
+    background-color: wheat;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 4px 4px 4px 4px rgba(0,0,0,.4);
+
+}
+
+/*------------------------------------*\
+  #MOBILE NAV
+\*------------------------------------*/
+
+.menu-animado {
+	background: wheat;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	top: 10px;
+	right: 20px;
+	position: fixed;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
+	transition: box-shadow 1.1s cubic-bezier(.19,1,.22,1);
+
+}
+
+#hamburguer {
+	display: block;
+	width: 23px;
+	height: 2px;
+	position: relative;
+	background: #424242;
+	transition: .5s ease-out;
+
+}
+
+#hamburguer:before, 
+#hamburguer:after {
+	position: absolute;
+	display: block;
+	content: "";
+	background: #424242;
+	width: 100%;
+	height: 100%;
+	transition: .5s ease-out;
+}
+
+#hamburguer:before { top: -8px; }
+
+#hamburguer:after { bottom: -8px; }
+
+.ativo {
+	transform: rotate(45deg);
+}
+
+.ativo:before {
+	top: 0 !important;
+	transform: rotate(90deg);
+}
+
+.ativo:after {
+	bottom: 0 !important;
+	transform: rotate(90deg);
+}
+
+.menu-mobile {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	list-style: none;
+	font-size: 45px;
+	opacity: 0;
+	transition: .25s .1s cubic-bezier(0, 1.07, 0, 1.02);
+	z-index: 2;
+	height: 100%;
+	visibility: hidden;
+	
+}
+
+.menu-mobile nav {
+	width: 100%;
+}
+
+.menu-mobile nav ul {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding: 0;
+	margin-top: 91px;
+}
+
+.menu-mobile nav ul li { 
+	margin-bottom: 40px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.menu-mobile nav ul li a { 
+	font-size: 16pt;
+	color: #424242;
+	font-weight: 500;
+}
